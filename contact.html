@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="tools.html" class="nav-link">Tools</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="https://github.com" target="_blank" class="github-link-nav" title="GitHub">🐙</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Get In Touch</h1>
+            <p class="fade-in-delay">Let's work together or just chat</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper fade-up">
+                    <h2>Send Me a Message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="web-dev">Web Development</option>
+                                <option value="ml">Machine Learning</option>
+                                <option value="data-analysis">Data Analysis</option>
+                                <option value="consulting">Technical Consulting</option>
+                                <option value="tutoring">Tutoring & Training</option>
+                                <option value="startup">Startup Development</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper fade-up">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Location</h3>
+                            <p>City, State, Country</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-content">
+                            <h3>Response Time</h3>
+                            <p>Usually within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <h3>Follow Me</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+                                <span>🔗</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">
+                                <span>💼</span>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter">
+                                <span>🐦</span>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">
+                                <span>📷</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Upload Section -->
+    <section class="resume-section">
+        <div class="container">
+            <h2 class="section-title">Share Your Resume</h2>
+            <div class="resume-container fade-up">
+                <div class="resume-placeholder">
+                    <div class="resume-icon">📄</div>
+                    <h3>Upload Your Resume</h3>
+                    <p>Share your resume with me for job opportunities or collaborations.</p>
+                    <label class="resume-upload">
+                        <input type="file" id="resume-file" accept=".pdf,.doc,.docx" hidden>
+                        <span class="btn btn-primary">Choose File</span>
+                    </label>
+                    <div id="resume-preview" class="resume-preview"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item fade-up">
+                    <h3>What's your typical project timeline?</h3>
+                    <p>Project timelines vary depending on complexity and scope. Typically, small projects take 2-4 weeks, while larger projects can take 2-3 months. I'll provide a detailed estimate during our initial consultation.</p>
+                </div>
+
+                <div class="faq-item fade-up">
+                    <h3>Do you offer ongoing support?</h3>
+                    <p>Yes! I provide ongoing support and maintenance packages for all projects. This includes bug fixes, feature updates, and performance optimization.</p>
+                </div>
+
+                <div class="faq-item fade-up">
+                    <h3>What's your payment structure?</h3>
+                    <p>I typically work with 50% upfront deposit and 50% upon completion. For larger projects, we can discuss milestone-based payments.</p>
+                </div>
+
+                <div class="faq-item fade-up">
+                    <h3>Can you work with existing codebases?</h3>
+                    <p>Absolutely! I frequently work on existing projects, including code reviews, optimization, and feature additions.</p>
+                </div>
+
+                <div class="faq-item fade-up">
+                    <h3>Do you sign NDAs?</h3>
+                    <p>Yes, I can sign confidentiality agreements for sensitive projects. Protecting client privacy and intellectual property is important to me.</p>
+                </div>
+
+                <div class="faq-item fade-up">
+                    <h3>How can I stay updated on project progress?</h3>
+                    <p>I provide regular updates through email, calls, or your preferred communication method. For larger projects, we can schedule weekly check-ins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 My Portfolio. Built with passion and code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
