@@ -12,6 +12,13 @@
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --accent-glow: rgba(59, 130, 246, 0.3);
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --about-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    --quick-links-bg: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    --card-border: rgba(59, 130, 246, 0.2);
+    --card-border-strong: rgba(59, 130, 246, 0.4);
+    --footer-bg: rgba(15, 23, 42, 0.95);
+    --footer-border: rgba(59, 130, 246, 0.2);
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -21,8 +28,16 @@ body.light-mode {
     --card-bg: #ffffff;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent-glow: rgba(59, 130, 246, 0.2);
+    --accent-glow: rgba(59, 130, 246, 0.15);
+    --hero-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --about-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    --quick-links-bg: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    --card-border: rgba(59, 130, 246, 0.12);
+    --card-border-strong: rgba(59, 130, 246, 0.2);
+    --footer-bg: rgba(255, 255, 255, 0.9);
+    --footer-border: rgba(59, 130, 246, 0.12);
 }
+
 
 * {
     margin: 0;
@@ -290,7 +305,7 @@ body.light-mode .navbar {
     position: relative;
     overflow: hidden;
     margin-top: 60px;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: var(--hero-bg);
 }
 
 .hero-background {
@@ -336,7 +351,7 @@ body.light-mode .navbar {
 
 .about {
     padding: 6rem 0;
-    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    background: var(--about-bg);
 }
 
 .about-content {
@@ -363,7 +378,7 @@ body.light-mode .navbar {
 .skills h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .skill-tags {
@@ -375,16 +390,16 @@ body.light-mode .navbar {
 .skill-tag {
     display: inline-block;
     padding: 0.7rem 1.3rem;
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid var(--primary-green);
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid var(--primary-blue);
     border-radius: 50px;
-    color: var(--primary-green);
+    color: var(--primary-blue);
     font-weight: 600;
     transition: var(--transition);
 }
 
 .skill-tag:hover {
-    background: var(--primary-green);
+    background: var(--primary-blue);
     color: white;
     transform: translateY(-3px);
 }
@@ -635,8 +650,8 @@ body.light-mode .navbar {
    ============================================ */
 
 .footer {
-    background: rgba(15, 23, 42, 0.95);
-    border-top: 1px solid rgba(16, 185, 129, 0.2);
+    background: var(--footer-bg);
+    border-top: 1px solid var(--footer-border);
     padding: 2rem 0;
     text-align: center;
     color: var(--text-secondary);
@@ -699,7 +714,7 @@ body.light-mode .navbar {
 
 .page-header h1 {
     font-size: 3rem;
-    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -717,7 +732,7 @@ body.light-mode .navbar {
 
 .quick-links {
     padding: 6rem 0;
-    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    background: var(--quick-links-bg);
 }
 
 .links-grid {
@@ -728,7 +743,7 @@ body.light-mode .navbar {
 
 .link-card {
     background: var(--card-bg);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
@@ -741,9 +756,9 @@ body.light-mode .navbar {
 }
 
 .link-card:hover {
-    border-color: var(--primary-green);
+    border-color: var(--primary-blue);
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
 }
 
 .link-icon {
@@ -754,7 +769,7 @@ body.light-mode .navbar {
 .link-card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-green);
+    color: var(--primary-blue);
 }
 
 .link-card p {
@@ -762,7 +777,7 @@ body.light-mode .navbar {
 }
 
 /* ============================================
-   PROJECTS DETAIL PAGE
+   PAGE HEADER
    ============================================ */
 
 .projects-detail {
